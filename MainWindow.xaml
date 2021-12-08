@@ -23,9 +23,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Label x:Name="lblSlot_1" Grid.Row="2" Grid.Column="1" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="16"></Label>
-        <Label x:Name="lblSlot_2" Grid.Row="2" Grid.Column="2" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="16"></Label>
-        <Label x:Name="lblSlot_3" Grid.Row="2" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="16"></Label>
+        <Label x:Name="lblSlot_1" Grid.Row="2" Grid.Column="1" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="48"></Label>
+        <Label x:Name="lblSlot_2" Grid.Row="2" Grid.Column="2" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="48"></Label>
+        <Label x:Name="lblSlot_3" Grid.Row="2" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="3ds Light" FontSize="48"></Label>
 
         <Button x:Name="btn1" Grid.Row="3" Grid.Column="1" Margin="30,30,30,30" Content="Hit" Click="btn1_Click" Background="LightGreen" />
         <Button x:Name="btn2" Grid.Row="3" Grid.Column="2" Margin="30,30,30,30" Content="Hit" Click="btn2_Click" Background="LightGreen" />
