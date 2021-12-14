@@ -5,32 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SlotMachineMultithreaded"
         mc:Ignorable="d"
-        Title="Slot Machine" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Slot Machine"
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+    
     <Window.Resources>
-        <Style x:Key="FocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
-        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
-        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <!--<Setter Property="Background" Value="#D0FFD6"/>-->
             <Setter Property="Background" Value="LightGoldenrodYellow"/>
-            <!--<Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>-->
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="FontFamily" Value="3ds Light" />
             <Setter Property="FontSize" Value="20" />
@@ -46,12 +28,6 @@
                         <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
-                        <ControlTemplate.Triggers>                            
-                            <!--<Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" Value="AliceBlue"/>
-                                <Setter Property="BorderThickness" Value="4"/>
-                            </Trigger>-->
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -63,9 +39,7 @@
         </Style>
 
         <Style x:Key="CashButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="#26C485"/>
-            <!--<Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>-->
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="FontFamily" Value="3ds Light" />
             <Setter Property="FontSize" Value="20" />
@@ -117,7 +91,6 @@
     </Window.Resources>
 
     <Grid Background="#2C497F">
-        <!-- D33F49 red, CC2936 red, B7B5E4 light purple-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -155,11 +128,14 @@
             </Label.Style>
         </Label>
 
-        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_1" Grid.Row="2" Grid.Column="1" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_2" Grid.Row="2" Grid.Column="2" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_3" Grid.Row="2" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_1" Grid.Row="2" Grid.Column="1" Content="0"
+               HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_2" Grid.Row="2" Grid.Column="2" Content="0"
+               HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label Style="{DynamicResource LabelStyle}" x:Name="lblSlot_3" Grid.Row="2" Grid.Column="3" Content="0"
+               HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
 
-        <Label x:Name="lblWins" Grid.Row="0" Grid.Column="0" Content="Wins: "
+        <Label x:Name="lblWins" Grid.Row="0" Grid.Column="0" Content="Wins: 0"
                FontSize="20"
                FontFamily="3ds Light"
                Foreground="White"

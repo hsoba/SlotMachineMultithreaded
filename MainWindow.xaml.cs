@@ -1,10 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace SlotMachineMultithreaded
@@ -15,7 +12,6 @@ namespace SlotMachineMultithreaded
         BackgroundWorker backgroundWorker2 = new BackgroundWorker();
         BackgroundWorker backgroundWorker3 = new BackgroundWorker();
 
-        SolidColorBrush myGreenBrush = new SolidColorBrush(Color.FromRgb(208, 255, 214));
         SolidColorBrush myRedBrush = new SolidColorBrush(Color.FromRgb(211, 63, 73));
         SolidColorBrush myBlackBrush = new SolidColorBrush(Color.FromRgb(0, 0, 0));
 
@@ -143,13 +139,11 @@ namespace SlotMachineMultithreaded
                 btnPlay.Content = "Stop";
                 btnPlay.Foreground = myRedBrush;
                 btnPlay.FontWeight = FontWeights.Heavy;
-                //btnPlay.Background = myRedBrush;
             }
         }
 
         private void CancelAllWorkers()
         {
-            //btnPlay.Background = btn1.Background = btn2.Background = btn3.Background = myGreenBrush;
             btnPlay.Content = "Play";
             btnPlay.Foreground = myBlackBrush;
             btnPlay.FontWeight = FontWeights.Medium;
@@ -258,11 +252,12 @@ namespace SlotMachineMultithreaded
             if (lblSlot_1.Content.ToString() == lblSlot_2.Content.ToString() && lblSlot_2.Content.ToString() == lblSlot_3.Content.ToString())
             {
                 lblWins.Content = "Wins: " + winCounter++.ToString();
-                MessageBox.Show("Winner...");
+                System.Media.SystemSounds.Exclamation.Play();
+                new CustomMessageBox().Show();
             }
             else
             {
-                MessageBox.Show("Try again");
+                MessageBox.Show("Try again.");
             }
         }
     }
