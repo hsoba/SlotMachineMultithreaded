@@ -8,6 +8,7 @@
         Title="Slot Machine"
         Height="450" 
         Width="800"
+        MinHeight="420" MinWidth="650"
         WindowStartupLocation="CenterScreen">
     
     <Window.Resources>
@@ -69,14 +70,14 @@
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="FontFamily" Value="3ds Light" />
-            <Setter Property="FontSize" Value="72" />
-            <Setter Property="Padding" Value="3"/>
+            <Setter Property="FontSize" Value="64" />
+            <Setter Property="Padding" Value="1"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Label}">
-                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Padding="0" SnapsToDevicePixels="true">
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
